@@ -3,13 +3,14 @@
 #include "train.h"
 
 int main() {
-    int lengths[] = {2, 5, 10, 20, 30};
+    const int lengths[] = {2, 5, 10, 20, 30};
     int num_tests = 5;
 
     for (int i = 0; i < num_tests; ++i) {
         int n = lengths[i];
 
-        std::cout << "Test: train with " << n << " cars" << std::endl;
+        std::cout << "Test: train with " << n
+            << " cars" << std::endl;
 
         //all lights off
         Train train1;
@@ -39,9 +40,12 @@ int main() {
         int len3 = train3.getLength();
         int ops3 = train3.getOpCount();
 
-        std::cout << "All off: length=" << len1 << ", operations=" << ops1 << std::endl;
-        std::cout << "All on: length=" << len2 << ", operations=" << ops2 << std::endl;
-        std::cout << "Random: length=" << len3 << ", operations=" << ops3 << std::endl;
+        std::cout << "All off: length=" << len1
+            << ", operations=" << ops1 << std::endl;
+        std::cout << "All on: length=" << len2
+            << ", operations=" << ops2 << std::endl;
+        std::cout << "Random: length=" << len3
+            << ", operations=" << ops3 << std::endl;
     }
     return 0;
 }
